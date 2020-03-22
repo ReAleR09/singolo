@@ -1,11 +1,43 @@
-body {
+@font-face {
 	font-family: "Lato";
+	font-style: normal;
 	font-weight: 300;
+	src: url("./assets/fonts/Lato-Light.ttf") format("truetype");
+  }
+  
+  @font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 700;
+	src: url("./assets/fonts/Lato-Bold.ttf") format("truetype");
+  }
+  
+  @font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 900;
+	src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
+  }
+
+body {
+	font-weight: 300;
+	font-family: "Lato";
+}
+
+.wrapper {
+	width: 1020px;
 }
 
 .header {
 	width: 100%;
-	height: 90px;
+	height: 89px;
 	background-color: #2d303a;
 	border-bottom: #323746 6px solid;
 	display: flex;
@@ -13,18 +45,22 @@ body {
 }
 
 .header .logo {
-	font-size: 25px;
+	font-size: 24px;
 	color: #ffffff;
 	font-weight: 700;
-	margin: 40px 0 0 34px;
+	margin: 32px 0 0 40px;
+	font-family: "Lato";
 }
 
-.logo span:nth-child(2) {
+.logo h1 {
+	display: inline;
+}
+.logo span {
 	color: #f06c64;
 }
 
 .header .navbar {
-	margin: 45px 40px 0 0;
+	margin: 40px 39px 0 0;
 	width: 371px;
 }
 
@@ -40,6 +76,7 @@ body {
 	font-size: 12px;
 	font-weight: 700;
 	text-transform: uppercase;
+	letter-spacing: -0.3px;
 }
 
 .header .navbar ul>li>a:hover{
@@ -48,5 +85,159 @@ body {
 
 .slider {
 	background-color: #f06c64;
-	height: 600px;
+	border-bottom: #ea676b 6px solid;
+	height: 594px;
+	width: 100%;
+	display: block;
+	position: relative;
 }
+
+.slider>.slide {
+	height: inherit;
+	display: flex;
+	width: inherit;
+}
+
+.slide>.phones {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.phones #phone1 {
+	display: flex;
+	width: 240px;
+	height: 483px;
+	margin: -5px 0 0 112px;
+	background-image: url("assets/img/phone_1.png");
+	background-size: cover;
+}
+
+
+.phones #phone2 {
+	display: flex;
+	width: 484px;
+	height: 240px;
+	margin: -6px 111px 0 0;
+	background-image: url("assets/img/phone_2.png");
+	background-size: cover;
+}
+
+.slider>.nav {
+	position: absolute;
+	height: inherit;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider>.nav .nav_left {
+	display: flex;
+	width: 20px;
+	margin: -6px 0px 0px 42px;
+	cursor: pointer;
+}
+
+.slider>.nav .nav_right {
+	display: flex;
+	width: 20px;
+	margin: -6px 40px 0px 0px;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+
+.services {
+	height: 494px;
+	background-color: #f2f2f2;
+	border-bottom: #fff 6px solid;
+	display: flex;
+	flex-flow: column nowrap;
+	color: #666d89;
+	font-family: "Lato";
+	padding: 62px 40px 0 40px;
+}
+
+.services>.title {
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.services>.text {
+	width: 940px;
+	font-size: 18px;
+	line-height: 30px;
+	color: #767e9e;
+	font-weight: 300;
+	margin-top: 21px;
+	letter-spacing: -0.09px;
+	text-align: justify;
+}
+
+.services>.pane {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 44px;
+}
+
+.services .item {
+	width: 300px;
+	height: 123px;
+}
+
+.services .item>.wrap {
+	font-size: 18px;
+	font-weight: 900;
+	position: relative;
+	margin-bottom: 30px;
+	padding-left: 80px;
+}
+
+.services .item .title{
+	font-size: 18px;
+	font-weight: 900;
+	letter-spacing: -0.1px;
+	line-height: 19px;
+}
+
+.services .item .description{
+	font-size: 12px;
+	line-height: 22px;
+	color: #767e9e;
+	font-weight: 400;
+	text-align: justify;
+	margin-top: 9px;
+	/* letter-spacing: -0.1px; */
+}
+
+.icon {
+	width: 59px;
+	height: 59px;
+	background-size: cover;
+	position: absolute;
+	margin-top: 3px;
+}
+
+.icon.icon_pen {
+	background-image: url("assets/img/icon_pen.png");
+}
+.icon.icon_bubble {
+	background-image: url("assets/img/icon_bubble.png");
+}
+.icon.icon_bulb {
+	background-image: url("assets/img/icon_bulb.png");
+}
+.icon.icon_heart {
+	background-image: url("assets/img/icon_heart.png");
+}
+.icon.icon_phone {
+	background-image: url("assets/img/icon_phone.png");
+}
+.icon.icon_star {
+	background-image: url("assets/img/icon_star.png");
+}
+
