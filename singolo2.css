@@ -34,3 +34,94 @@ body {
 .wrapper {
 	width: 1020px;
 }
+
+.portfolio {
+	background-color: #2d303a;
+	height: 801px;
+	border-bottom: #323746 6px solid;
+	color: #666d89;
+	padding: 63px 40px 0 40px;
+}
+
+.portfolio .title {
+	font-size: 30px;
+	font-weight: 900;
+	letter-spacing: 0.2px;
+}
+
+.portfolio .description {
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 27px;
+	letter-spacing: -0.21px;
+}
+
+.portfolio .gallery {
+
+}
+
+.portfolio .gallery .nav {
+	width: 287px;
+	height: 22px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	margin-top: 18px;
+	margin-left: 1px;
+}
+
+.portfolio .gallery .nav a {
+	border-radius: 4px;
+	border: 1px solid #666d89;
+	color: #666d89;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 2px 6px;
+}
+
+.portfolio .gallery .nav a:hover {
+	border: 1px solid #dedede;
+	color: #dedede;
+}
+
+.portfolio .gallery .pictures{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin-top: 19px;
+}
+
+.portfolio .gallery .pictures>.pic{
+	display: flex;
+	width: 220px;
+	height: 187px;
+	overflow: hidden;
+	justify-content: center;
+	margin-bottom: 20px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.portfolio .gallery .pictures>.pic img {
+    width: inherit;
+}
+
+.portfolio .gallery .pictures>.pic:nth-child(4n+1){
+	margin-left:0px;
+}
+
+.portfolio .gallery .pictures>.pic:nth-child(4n+4){
+	margin-right:0px;
+}
+
+.portfolio .gallery .pictures>.pic:nth-child(n+13){
+	display:none;
+}
+
+
+.aboutus {
+	background-color: #f2f2f2;
+	height: 728px;
+	border-bottom: #ffffff 6px solid;
+}
