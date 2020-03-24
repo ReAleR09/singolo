@@ -1,0 +1,258 @@
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 300;
+	src: url("./assets/fonts/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 700;
+	src: url("./assets/fonts/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 900;
+	src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
+}
+
+body {
+	font-weight: 300;
+	font-family: "Lato";
+}
+
+.wrapper {
+	width: 1020px;
+}
+
+.social {
+	width: 152px;
+	height: 32px;
+	margin-top: 25px;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+.social>.icon {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	border-radius: 16px;
+	border: 1px solid #666d89;
+	background-repeat: no-repeat;
+}
+
+.social>.icon.icon_facebook {
+	background-image: url("./assets/img/social/facebook.png");
+	background-position-x: 56%;
+	background-position-y: 49%;
+	background-size: 8px;
+}
+
+.social>.icon.icon_google {
+	background-image: url("./assets/img/social/google.png");
+	background-position-x: 56%;
+	background-position-y: 49%;
+	background-size: 14px;
+}
+
+.social>.icon.icon_twitter {
+	background-image: url("./assets/img/social/twitter.png");
+	background-position-x: 56%;
+	background-position-y: 49%;
+	background-size: 14px;
+}
+
+.social>.icon.icon_linkedin {
+	background-image: url("./assets/img/social/linkedin.png");
+	background-position-x: 56%;
+	background-position-y: 49%;
+	background-size: 14px;
+}
+
+.feedback {
+	height: 524px;
+	color: #f0d8d9;
+	background-color: #f06c64;
+	border-bottom: 6px solid #ea676b;
+	padding: 62px 40px;
+}
+
+.feedback>h3 {
+	font-size: 30px;
+	font-weight: 900;
+	letter-spacing: -0.25px;
+}
+
+.feedback>p {
+	font-weight: 300;
+	text-align: justify;
+	line-height: 30px;
+	font-size: 18px;
+	margin-top: 20px;
+	letter-spacing: -0.2px;
+}
+
+.feedback>.contacts {
+	display: flex;
+	margin-top: 45px;
+	flex-flow: row;
+	height: 432px;
+}
+
+.feedback>.contacts>form {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 418px;
+	width: 619px;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.feedback>.contacts>form input {
+	display: flex;
+	height: 38px;
+	background-color: #d6564f;
+	border: 0px;
+	border-radius: 5px;
+	font-size: 12px;
+	color: #f48c8f;
+	font-weight: 400;
+	font-family: "Lato";
+	padding: 0 0 0 14px;
+	letter-spacing: 0.1px;
+}
+
+.feedback>.contacts>form input::placeholder,
+.feedback>.contacts>form input::-webkit-input-placeholder { /* Edge */
+	color: #f48c8f;
+}
+
+.feedback>.contacts>form textarea::placeholder,
+.feedback>.contacts>form textarea::-webkit-input-placeholder { /* Edge */
+	color: #f48c8f;
+}
+  
+.feedback>.contacts>form textarea {
+	display: flex;
+	background-color: #d6564f;
+	border: 0px;
+	border-radius: 5px;
+	font-size: 12px;
+	color: #f48c8f;
+	font-weight: 400;
+	font-family: "Lato";
+	padding: 10px 0 0 14px;
+	height: 192px;
+	resize: none;
+}
+
+.feedback>.contacts>form button {
+	height: 38px;
+	width: 200px;
+	display: flex;
+	align-self: flex-end;
+	margin: unset;
+	border: unset;
+	background-color: #d6564f;
+	border-radius: 5px;
+	font-size: 12px;
+	color: #f48c8f;
+	font-weight: 400;
+	font-family: "Lato";
+	padding: 0px 0 0 14px;
+	cursor: pointer;
+}
+
+.feedback>.contacts>.info {
+	display: block;
+	width: 300px;
+	padding-left: 20px;
+}
+
+.feedback>.contacts>.info>span {
+	font-size: 18px;
+	font-weight: 900;
+	letter-spacing: 0.1px;
+}
+
+.feedback>.contacts>.info>p {
+	font-size: 12px;
+	font-weight: 400;
+	text-align: justify;
+	line-height: 22px;
+	margin-top: 9px;
+	letter-spacing: -0.15px;
+	margin-bottom: 22px;
+}
+
+.feedback>.contacts>.info li {
+	margin-bottom: 4px;
+}
+
+.feedback>.contacts>.info li>a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #f0d8d9;
+	font-weight: 400;
+	margin-left: 4px;
+}
+
+.feedback>.contacts>.info li>.icon {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background-repeat: no-repeat;
+	filter: invert(82%) sepia(5%) saturate(724%) hue-rotate(308deg) brightness(111%) contrast(88%);
+}
+
+.feedback>.contacts>.info li>.icon_loc {
+	background-image: url("./assets/img/icons/location.svg");
+	background-size: 8px;
+	background-position: 50% 115%;
+}
+
+.feedback>.contacts>.info li>.icon_tel {
+	background-image: url("./assets/img/icons/phone.svg");
+	background-size: 12px;
+	background-position: 45% 90%;
+}
+
+.feedback>.contacts>.info li>.icon_mail {
+	background-image: url("./assets/img/icons/mail.svg");
+	background-size: 14px;
+	background-position: 50% 120%;
+}
+
+footer {
+	height: 76px;
+	background-color: #2d303a;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 40px;
+}
+
+footer span{
+	display: flex;
+	font-size: 12px;
+	margin-top: -2px;
+	letter-spacing: -0.1px;
+	color:#666d89;
+}
+
+footer .social{
+    margin-top: 0px;
+}
