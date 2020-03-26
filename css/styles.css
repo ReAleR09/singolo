@@ -37,13 +37,20 @@ body {
 	width: 1020px;
 }
 
-.header {
-	width: 100%;
+header {
 	height: 89px;
+	width: 100%;
+}
+
+.header {
+	width: 1020px;
+	height: inherit;
 	background-color: #2d303a;
 	border-bottom: #323746 6px solid;
 	display: flex;
 	justify-content: space-between;
+	position: fixed;
+	z-index: 9999;
 }
 
 .header .logo {
@@ -79,9 +86,14 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: -0.3px;
+	transition: color 0.3s;
 }
 
 .header .navbar ul>li>a:hover{
+	color: #f06c64;
+}
+
+.header .navbar ul>li>a.active {
 	color: #f06c64;
 }
 
