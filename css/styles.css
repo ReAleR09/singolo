@@ -94,10 +94,21 @@ body {
 	position: relative;
 }
 
-.slider>.slide {
+.slider>.slides {
+	display: flex;
+	height: inherit;
+	justify-content: space-between;
+	overflow-x: hidden;
+	width: inherit;
+}
+
+.slider>.slides>.slide {
 	height: inherit;
 	display: flex;
 	width: inherit;
+	flex-shrink: 0;
+	position: relative;
+	transition: left 1s ease-in-out;
 }
 
 .slide>.phones {
@@ -135,6 +146,7 @@ body {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 1000;
 }
 
 .slider>.nav .nav_left {
