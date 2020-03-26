@@ -34,6 +34,16 @@ function slider(selector) {
 	}
 }
 
+function togglePhoneScreen(...phoneDomIds) {
+	phoneDomIds.forEach(phoneId => {
+		const screenEl = document.getElementById(phoneId).getElementsByClassName('screen')[0];
+		screenEl.addEventListener('click', function(e) {
+			e.target.style.opacity = e.target.style.opacity == '1' ? 0 : 1;
+		});
+	});
+}
+
 window.onload = function() {
 	slider('phones_slider');
+	togglePhoneScreen('phone1', 'phone2', 'phone3');
 };
