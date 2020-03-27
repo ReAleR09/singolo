@@ -1,4 +1,4 @@
-function slider(selector) {
+function initSlider(selector) {
 	const sliderElement = document.getElementById(selector);
 
 	const navLeft = sliderElement.getElementsByClassName('nav_left')[0];
@@ -37,7 +37,7 @@ function slider(selector) {
 	}
 }
 
-function togglePhoneScreen(...phoneDomIds) {
+function initTogglePhoneScreen(...phoneDomIds) {
 	phoneDomIds.forEach(phoneId => {
 		const screenEl = document.getElementById(phoneId).getElementsByClassName('screen')[0];
 		screenEl.addEventListener('click', function(e) {
@@ -104,11 +104,70 @@ function initMenu(menuId, offsetElId) {
 			activeAnchorEl = newActiveAnchorEl; 
 		}
 	}
+}
 
+
+function initPortfolio(tabsSelector, shuffleContainerSelector) {
+	const navButtonsElements = document.querySelectorAll(tabsSelector);
+	let activeButtonEl = null;
+
+	_setActiveTab(navButtonsElements[0]);
+
+	for(const i in Object.keys(navButtonsElements)) {
+		navButtonsElements[i].addEventListener('click', function(e) {
+			if(e.target === activeButtonEl) {
+				return;
+			}
+			_setActiveTab(e.target);
+			_shuffleItems();
+		});
+	}
+
+	const itemsContainerEl = document.querySelector(shuffleContainerSelector);
+	let activePicEl = null;
+
+	itemsContainerEl.addEventListener('click', function(e) {
+		const path = e.path || (e.composedPath && e.composedPath());
+		if(!path) {
+			return;
+		}
+
+		for (const i in path) {
+			const el = path[i];
+			if(el === itemsContainerEl) {
+				return;
+			}
+			if(el.classList.contains('pic')) {
+				if(el !== activePicEl) {
+					if(activePicEl) {
+						activePicEl.classList.remove('active');
+					}
+					activePicEl = el;
+					el.classList.add('active');
+				}
+				return;
+			}
+		}
+	});
+	
+	function _shuffleItems() {
+		for (let i = 0; i < itemsContainerEl.children.length; i++) {
+			itemsContainerEl.appendChild( itemsContainerEl.children[Math.random() * i | 0] );
+		}
+	}
+
+	function _setActiveTab(clickedButtonEl) {
+		for(const i in Object.keys(navButtonsElements)) {
+			navButtonsElements[i].classList.remove('active');
+		}
+		activeButtonEl = clickedButtonEl;
+		activeButtonEl.classList.add('active');
+	}
 }
 
 window.onload = function() {
-	slider('phones_slider');
-	togglePhoneScreen('phone1', 'phone2', 'phone3');
+	initSlider('phones_slider');
+	initTogglePhoneScreen('phone1', 'phone2', 'phone3');
 	initMenu('menu', 'home');
+	initPortfolio('#portfolio .gallery .nav a', '#portfolio .gallery .pictures');
 };
