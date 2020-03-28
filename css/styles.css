@@ -31,6 +31,7 @@
 body {
 	font-weight: 300;
 	font-family: "Lato";
+	width: max-content;
 }
 
 .wrapper {
@@ -50,7 +51,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
-	z-index: 9999;
+	z-index: 2000;
 }
 
 .header .logo {
@@ -579,7 +580,6 @@ header {
 
 .feedback>.contacts>form button {
 	align-self: flex-start;
-	margin: unset;
 	border: unset;
 	font-size: 14px;
 	color: #886A30;
@@ -588,8 +588,6 @@ header {
 	cursor: pointer;
 	width: 136px;
 	height: 38px;
-	left: 40px;
-	top: 3350px;
 	background: #FBC65F;
 	border-radius: 5px;
 }
@@ -671,4 +669,61 @@ footer span{
 
 footer .social{
     margin-top: 0px;
+}
+
+#submitModal{
+	position: fixed;
+	top: calc(50vh - 132px);
+	left: calc(510px - 301px);
+	width: 540px;
+	z-index: 9999;
+	background-color: #f06c64;
+	display: none;
+	padding: 26px;
+	border-radius: 10px;
+	border: white 5px solid;
+	margin-top: -10vh;
+	opacity: 0;
+	transition: margin 0.3s, opacity 0.3s;
+	flex-flow: column;
+}
+
+#submitModal.active {
+	margin-top: 0;
+	opacity: 1;
+}
+
+#submitModal p {
+	display: flex;
+	height: 55px;
+}
+
+#submitModal>#message {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+#submitModal>.close {
+	align-self: flex-end;
+	border: unset;
+	font-size: 14px;
+	color: #886A30;
+	font-weight: 400;
+	font-family: "Lato";
+	cursor: pointer;
+	width: 136px;
+	height: 38px;
+	background: #FBC65F;
+	border-radius: 5px;
+}
+
+#backdrop {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 1020px;
+	height: 100vh;
+	background-color: #2d303a;
+	z-index: 3000;
+	transition: opacity 0.3s;
 }

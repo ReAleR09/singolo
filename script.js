@@ -165,9 +165,109 @@ function initPortfolio(tabsSelector, shuffleContainerSelector) {
 	}
 }
 
+function SubmitModal(modalId, closeCallback) {
+	const that = this;
+
+	this.modalEl = document.getElementById(modalId);
+	
+	this.isShown = false;
+	this.backdropEl = null;
+	this.closeCallback = closeCallback;
+
+	this.closeButtonEl = this.modalEl.getElementsByClassName('close')[0];
+	this.closeButtonEl.addEventListener('click', function(e) {
+		e.preventDefault();
+		that.hide();
+	});
+	
+	this.show = function() {
+		that._addBackdrop();
+		that._showModal();
+	}
+	this.hide = function() {
+		that._hideModal();
+		that._removeBackdrop();
+	}
+
+	this._showModal = function() {
+		if(this.isShown) {
+			return;
+		}
+		this.isShown = true;
+		this.modalEl.style.display = 'flex';
+		setTimeout(() => this.modalEl.classList.add('active'), 0);
+	}
+	this._hideModal = function() {
+		if(!this.isShown) {
+			return;
+		}
+		this.closeCallback();
+		this.isShown = false;
+		this.modalEl.classList.remove('active');
+		setTimeout(() => {this.modalEl.style.display = 'none'}, 300);
+	}
+
+	this._addBackdrop = function() {
+		if(this.backdropEl) {
+			return;
+		}
+		this.backdropEl = document.createElement("div");
+		this.backdropEl.style.opacity = '0';
+		this.backdropEl.setAttribute('id', 'backdrop');
+
+		this.backdropEl.addEventListener('click', () => this.hide());
+
+		document.body.appendChild(this.backdropEl);
+		
+		setTimeout(() => {this.backdropEl.style.opacity = '0.9';}, 0);
+	}	
+	this._removeBackdrop = function() {
+		if(!that.backdropEl) {
+			return;
+		}
+		this.backdropEl.style.opacity = '0';
+		setTimeout(() => {
+			that.backdropEl.remove();
+			that.backdropEl = null;
+		}, 300);
+	}
+}
+
+function initForm() {
+	const formEl = document.forms.feedback;
+	const onModalCLoseCallback = function() {
+		formEl.reset();
+	};
+	const modal = new SubmitModal('submitModal', onModalCLoseCallback);
+
+	const modalEl = document.getElementById('submitModal');
+
+	formEl.addEventListener('submit', function(e) {
+		e.preventDefault();
+		modal.show();
+		const subjEl = formEl.subject;
+		const modalSubjEl = modalEl.querySelector('#subject');
+		if(subjEl.value) {
+			modalSubjEl.innerText = 'Тема: ' + subjEl.value;
+		} else {
+			modalSubjEl.innerText = 'Без темы';
+		}
+		
+		const messageEl = formEl.message;
+		const modalMessageEl = modalEl.querySelector('#description');
+		if(messageEl.value) {
+			modalMessageEl.innerText = 'Описание: ' + messageEl.value;
+		} else {
+			modalMessageEl.innerText = 'Без описания';
+		}
+
+	});
+}
+
 window.onload = function() {
 	initSlider('phones_slider');
 	initTogglePhoneScreen('phone1', 'phone2', 'phone3');
 	initMenu('menu', 'home');
 	initPortfolio('#portfolio .gallery .nav a', '#portfolio .gallery .pictures');
+	initForm();
 };

@@ -234,7 +234,7 @@
 				tortor mauris condimentum nibh.
 			</p>
 			<div class="contacts">
-				<form method="POST" action="#">
+				<form method="POST" action="#" name="feedback">
 					<input type="text" name="name" id="name" placeholder="Name (Required)" required>
 					<input type="email" name="email" id="email" placeholder="Email (Required)" required>
 					<input type="text" name="subject" id="subject" placeholder="Subject">
@@ -278,5 +278,14 @@
 		</footer>
 
 	</div>
+
+	<div id='submitModal'>
+		<p id='message'>Письмо отправлено</p>
+		<p id="subject"></p>
+		<p id="description"></p>
+		<button class="close">OK</button>
+	</div>
+
+	<!-- <div id='backdrop'></div> -->
 </body>
 </html>
