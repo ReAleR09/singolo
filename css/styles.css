@@ -31,11 +31,15 @@
 body {
 	font-weight: 300;
 	font-family: "Lato";
-	width: max-content;
 }
 
 .wrapper {
 	width: 1020px;
+	margin: 0 auto;
+}
+
+#side_menu {
+	display: none;
 }
 
 header {
@@ -70,7 +74,7 @@ header {
 }
 
 .header .navbar {
-	margin: 40px 39px 0 0;
+	margin: 38px 39px 0 0;
 	width: 376px;
 }
 
@@ -696,6 +700,7 @@ footer .social{
 #submitModal p {
 	display: flex;
 	height: 55px;
+	text-overflow: inherit;
 }
 
 #submitModal>#message {
@@ -721,7 +726,7 @@ footer .social{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	width: 1020px;
+	width: 768px;
 	height: 100vh;
 	background-color: #2d303a;
 	z-index: 3000;

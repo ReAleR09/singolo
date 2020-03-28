@@ -1,0 +1,414 @@
+@media (max-width: 375px) {
+	.wrapper {
+		width: 375px;
+
+	}
+	
+	header {
+
+	}
+	#side_menu {
+
+	}
+
+	#side_menu.active {
+		
+	}
+
+	#side_menu #burger {
+		
+	}
+
+	#side_menu.active #burger {
+		
+	}
+
+	#side_menu #background {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 375px;
+	}
+
+	#side_menu.active #background {
+
+	}
+	
+	.header {
+		width: 375px;
+	}
+	
+	.header .logo {
+
+	}
+	
+	.logo h1 {
+
+	}
+	.logo span {
+
+	}
+	
+	.header .navbar {
+position: fixed;
+width: 278px;
+height: 100vh;
+left: -278px;
+}
+	
+	.header .navbar ul {
+flex-flow: column nowrap;
+}
+	
+	.header .navbar ul>li>a{
+
+	}
+	
+	.header .navbar ul>li>a:hover{
+
+	}
+	
+	.header .navbar ul>li>a.active {
+
+	}
+	
+	.slider {
+
+	}
+	
+	.slider>.slides {
+
+	}
+	
+	.slider>.slides>.slide {
+
+	}
+	
+	.slide>.phones {
+
+	}
+	
+	#phone1 {
+		width: 180px;
+		height: 364px;
+		margin: 4px 0 0 84px;
+	}
+	
+	
+	#phone2 {
+		width: 364px;
+		height: 180px;
+		margin: 6px 85px 0 0;
+	}
+	
+	.slide>.phones_2 {
+
+	}
+	
+	#phone3 {
+		width: 355px;
+		height: 350px;
+	}
+	
+	.screen {
+
+	}
+	
+	#phone1 .screen {
+		width: 143px;
+		height: 251px;
+		margin: 49px 0 0 10px;
+	}
+	
+	#phone2 .screen {
+		width: 251px;
+		height: 143px;
+		margin: 10px 0 0 45px;
+	}
+	
+	#phone3 .screen {
+		width: 138px;
+		height: 244px;
+		margin: 47px 0 0 100px;
+	}
+	
+	.slider>.nav {
+
+	}
+	
+	.slider>.nav .nav_left {
+		width: 20px;
+		margin: 12px 0px 0px 30px;
+	}
+	
+	.slider>.nav .nav_right {
+
+		width: 20px;
+		margin: 12px 27px 0px 0px;
+	}
+	
+	.services {
+		height: 432px;
+		padding: 44px 40px 0 40px;
+	}
+	
+	.services>.title {
+
+	}
+	
+	.services>.text {
+		width: 674px;
+		font-size: 18px;
+		line-height: 30px;
+		color: #767e9e;
+		font-weight: 300;
+		margin-top: 21px;
+	}
+	
+	.services>.pane {
+
+	}
+	
+	.services .item {
+
+	}
+	
+	.services .item>.wrap {
+
+	}
+	
+	.services .item .title{
+
+	}
+	
+	.services .item .description{
+
+	}
+	
+	.services .icon {
+
+	}
+	
+	
+	.portfolio {
+
+	}
+	
+	.portfolio .title {
+
+	}
+	
+	.portfolio .description {
+
+	}
+	
+	.portfolio .gallery .nav {
+
+	}
+	
+	.portfolio .gallery .nav a {
+
+	}
+	
+	.portfolio .gallery .nav a:hover {
+		border: 1px solid #dedede;
+		color: #dedede;
+	}
+	
+	.portfolio .gallery .nav a.active {
+
+	}
+	
+	.portfolio .gallery .pictures{
+
+	}
+	
+	.portfolio .gallery .pictures>.pic{
+
+	}
+	
+	.portfolio .gallery .pictures>.pic.active{
+
+	}
+	
+	.portfolio .gallery .pictures>.pic img {
+
+	}
+	
+	.portfolio .gallery .pictures>.pic:nth-child(4n+1){
+
+	}
+	
+	.portfolio .gallery .pictures>.pic:nth-child(4n+4){
+
+	}
+	
+	.portfolio .gallery .pictures>.pic:nth-child(n+13){
+
+	}
+	
+	.aboutus {
+
+	}
+	
+	.aboutus .title {
+
+	}
+	
+	.aboutus .description {
+
+	}
+	
+	.aboutus .people {
+
+	}
+	
+	.aboutus .people .card {
+
+	}
+	
+	.aboutus .people .card>img {
+
+	}
+	
+	.aboutus .people .card>span {
+
+	}
+	
+	.aboutus .people .card>p {
+
+	}
+	
+	.social {
+
+	}
+	
+	.social>.icon {
+
+	}
+	
+	.social>.icon.icon_facebook {
+
+	}
+	
+	.social>.icon.icon_google {
+
+	}
+	
+	.social>.icon.icon_twitter {
+
+	}
+	
+	.social>.icon.icon_linkedin {
+
+	}
+	
+	
+	.feedback {
+
+	}
+	
+	.feedback>h3 {
+
+	}
+	
+	.feedback>p {
+
+	}
+	
+	.feedback>.contacts {
+
+	}
+	
+	.feedback>.contacts>form {
+
+	}
+	
+	.feedback>.contacts>form input {
+
+	}
+	
+
+	  
+	.feedback>.contacts>form textarea {
+
+	}
+	
+	.feedback>.contacts>form button {
+
+	}
+	
+	.feedback>.contacts>.info {
+
+	}
+	
+	.feedback>.contacts>.info>span {
+
+	}
+	
+	.feedback>.contacts>.info>p {
+
+	}
+	
+	.feedback>.contacts>.info li {
+		margin-bottom: 4px;
+	}
+	
+	.feedback>.contacts>.info li>a {
+
+	}
+	
+	.feedback>.contacts>.info li>.icon {
+
+	}
+	
+	.feedback>.contacts>.info li>.icon_loc {
+
+	}
+	
+	.feedback>.contacts>.info li>.icon_tel {
+
+	}
+	
+	.feedback>.contacts>.info li>.icon_mail {
+
+	}
+	
+	footer {
+
+	}
+	
+	footer span{
+
+	}
+	
+	footer .social{
+
+	}
+	
+	#submitModal{
+
+	}
+	
+	#submitModal.active {
+
+	}
+	
+	#submitModal p {
+
+	}
+	
+	#submitModal>#message {
+	
+	}
+	
+	#submitModal>.close {
+	
+	}
+	
+	#backdrop {
+
+	}
+}
