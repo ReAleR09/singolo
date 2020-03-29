@@ -264,10 +264,51 @@ function initForm() {
 	});
 }
 
+function initSideBar(triggerElSelector, menuElSelector, closeTriggerElements) {
+	let opened = false;
+	const burgerButtonEl = document.querySelector(triggerElSelector);
+	const menuBlockEl = document.querySelector(menuElSelector);
+
+	// init clickable elements which will close the
+	for(const i in closeTriggerElements) {
+		const elements = document.querySelectorAll(closeTriggerElements[i]);
+		for(const j in Object.keys(elements)) {
+			elements[j].addEventListener('click', () => {
+				_close();
+			});
+		}
+	}
+
+	burgerButtonEl.addEventListener('click', () => {
+		if(opened) {
+			_close();
+		} else {
+			_open();
+		}
+	});
+
+	function _close() {
+		if(!opened) {
+			return;
+		}
+		menuBlockEl.classList.remove('opened');
+		opened = false;
+	}
+
+	function _open() {
+		if(opened) {
+			return;
+		}
+		menuBlockEl.classList.add('opened');
+		opened = true;
+	}
+}
+
 window.onload = function() {
 	initSlider('phones_slider');
 	initTogglePhoneScreen('phone1', 'phone2', 'phone3');
 	initMenu('menu', 'home');
 	initPortfolio('#portfolio .gallery .nav a', '#portfolio .gallery .pictures');
 	initForm();
+	initSideBar('#burger', '.header', ['#menu a', '#background']);
 };

@@ -43,11 +43,11 @@ header {
 	width: 100%;
 }
 
-#header #burger {
+header #burger {
 	display: none;
 }
 
-#header #background {
+header #background {
 	display: none;
 }
 
@@ -62,12 +62,17 @@ header {
 	z-index: 2000;
 }
 
-.header .logo {
+.header>.logo {
 	font-size: 24px;
 	color: #ffffff;
 	font-weight: 700;
 	margin: 32px 0 0 40px;
 	font-family: "Lato";
+	z-index: 70;
+}
+
+.navbar .logo {
+	display: none;
 }
 
 .logo h1 {
