@@ -6,24 +6,43 @@
 	
 	header {
 
-	}
-	#side_menu {
+height: 68px;
+
+}
+	#header {
 
 	}
 
-	#side_menu.active {
+	#header.active {
 		
 	}
 
-	#side_menu #burger {
+	#header #burger {
+		
+background-repeat: no-repeat;
+		
+background-image: url("../assets/img/icons/burger.svg");
+		
+background-size: 25px;
+		
+background-position: 50% 100%;
+		
+width: 25px;
+		
+height: 20px;
+		
+position: absolute;
+		
+top: 26px;
+		
+left: 20px;
+	}
+
+	#header.active #burger {
 		
 	}
 
-	#side_menu.active #burger {
-		
-	}
-
-	#side_menu #background {
+	#header #background {
 		display: none;
 		position: fixed;
 		top: 0;
@@ -32,17 +51,26 @@
 		width: 375px;
 	}
 
-	#side_menu.active #background {
+	#header.active #background {
 
 	}
 	
 	.header {
+		display: block;
 		width: 375px;
+		border-bottom: #323746 3px solid;
 	}
 	
 	.header .logo {
 
-	}
+margin: 26px 0 0 147px;
+
+font-size: 19.6875px;
+
+line-height: 22px;
+
+letter-spacing: -0.03em;
+}
 	
 	.logo h1 {
 
@@ -56,11 +84,13 @@
 width: 278px;
 height: 100vh;
 left: -278px;
-}
+}
 	
 	.header .navbar ul {
-flex-flow: column nowrap;
-}
+
+flex-flow: column nowrap;
+
+}
 	
 	.header .navbar ul>li>a{
 
@@ -76,7 +106,11 @@
 	
 	.slider {
 
-	}
+height: 221px;
+
+border-bottom: #ea676b 2px solid;
+
+}
 	
 	.slider>.slides {
 
@@ -91,16 +125,16 @@
 	}
 	
 	#phone1 {
-		width: 180px;
-		height: 364px;
-		margin: 4px 0 0 84px;
+	width: 88px;
+	height: 176px;
+	margin: 0px 0 0 41px;
 	}
 	
 	
 	#phone2 {
-		width: 364px;
-		height: 180px;
-		margin: 6px 85px 0 0;
+		width: 178px;
+		height: 88px;
+		margin: 2px 42px 0 0;
 	}
 	
 	.slide>.phones_2 {
@@ -108,8 +142,8 @@
 	}
 	
 	#phone3 {
-		width: 355px;
-		height: 350px;
+		width: 171px;
+		height: 170px;
 	}
 	
 	.screen {
@@ -117,21 +151,21 @@
 	}
 	
 	#phone1 .screen {
-		width: 143px;
-		height: 251px;
-		margin: 49px 0 0 10px;
+		width: 70px;
+		height: 123px;
+		margin: 23px 0 0 5px;
 	}
 	
 	#phone2 .screen {
-		width: 251px;
-		height: 143px;
-		margin: 10px 0 0 45px;
+		width: 123px;
+		height: 70px;
+		margin: 5px 0 0 22px;
 	}
 	
 	#phone3 .screen {
-		width: 138px;
-		height: 244px;
-		margin: 47px 0 0 100px;
+		width: 67px;
+		height: 118px;
+		margin: 23px 0 0 48px;
 	}
 	
 	.slider>.nav {
@@ -140,18 +174,21 @@
 	
 	.slider>.nav .nav_left {
 		width: 20px;
-		margin: 12px 0px 0px 30px;
+		margin: 12px 0px 0px 9px;
 	}
 	
 	.slider>.nav .nav_right {
 
-		width: 20px;
-		margin: 12px 27px 0px 0px;
-	}
+width: 20px;
+
+margin: 12px 9px 0px 0px;
+
+}
 	
 	.services {
-		height: 432px;
-		padding: 44px 40px 0 40px;
+		height: 1004px;
+		padding: 29px 32px 0 32px;
+		border-bottom: none;
 	}
 	
 	.services>.title {
@@ -159,7 +196,7 @@
 	}
 	
 	.services>.text {
-		width: 674px;
+		width: 310px;
 		font-size: 18px;
 		line-height: 30px;
 		color: #767e9e;
@@ -168,24 +205,39 @@
 	}
 	
 	.services>.pane {
-
-	}
+margin-top: 28px;
+width: 314px;
+flex-flow: column;
+justify-content: space-between;
+}
 	
 	.services .item {
 
-	}
+height: 119px;
+
+/* margin-bottom: 30px; */
+
+}
 	
 	.services .item>.wrap {
 
-	}
+margin: unset;
+
+}
 	
 	.services .item .title{
 
-	}
+line-height: unset;
+
+}
 	
 	.services .item .description{
 
-	}
+line-height: 22px;
+
+margin-top: 10px;
+
+}
 	
 	.services .icon {
 
@@ -193,8 +245,10 @@
 	
 	
 	.portfolio {
-
-	}
+padding: 45px 30px 1px 30px;
+height: 798px;
+border-bottom: unset;
+}
 	
 	.portfolio .title {
 
@@ -202,11 +256,17 @@
 	
 	.portfolio .description {
 
-	}
+width: 315px;
+
+margin-top: 21px;
+
+}
 	
 	.portfolio .gallery .nav {
 
-	}
+margin-top: 17px;
+
+}
 	
 	.portfolio .gallery .nav a {
 
@@ -223,17 +283,37 @@
 	
 	.portfolio .gallery .pictures{
 
-	}
+margin-top: 24px;
+
+justify-content: space-between;
+
+}
 	
 	.portfolio .gallery .pictures>.pic{
 
-	}
+width: 151px;
+
+height: 128px;
+
+margin-bottom: 19px;
+
+margin: 0 0 14px 0!important;
+
+}
 	
 	.portfolio .gallery .pictures>.pic.active{
 
 	}
 	
 	.portfolio .gallery .pictures>.pic img {
+
+	}
+
+	.portfolio .gallery .pictures>.pic:nth-child(n+9){
+		display: none;
+	}
+
+	.portfolio .gallery .pictures>.pic:nth-child(4n+1){
 
 	}
 	
@@ -250,8 +330,10 @@
 	}
 	
 	.aboutus {
-
-	}
+padding: 36px 30px 0 30px;
+height: 1718px;
+border-bottom: unset;
+}
 	
 	.aboutus .title {
 
@@ -262,28 +344,32 @@
 	}
 	
 	.aboutus .people {
-
-	}
+margin-top: 24px;
+}
 	
 	.aboutus .people .card {
-
-	}
+width: 314px;
+height: 440px;
+margin-bottom: 34px;
+}
 	
 	.aboutus .people .card>img {
-
-	}
+width: 314px;
+height: 314px;
+margin-left: 1px;
+}
 	
 	.aboutus .people .card>span {
-
-	}
+margin-top: 19px;
+}
 	
 	.aboutus .people .card>p {
 
 	}
 	
 	.social {
-
-	}
+margin-top: 14px;
+}
 	
 	.social>.icon {
 
@@ -307,8 +393,12 @@
 	
 	
 	.feedback {
+padding: 47px 30px 45px 27px;
+height: 877px;
+border-bottom: unset;
+}
 
-	}
+div#feedback {}
 	
 	.feedback>h3 {
 
@@ -319,30 +409,41 @@
 	}
 	
 	.feedback>.contacts {
-
-	}
+flex-flow: column;
+margin-top: 24px;
+height: 605px;
+}
 	
 	.feedback>.contacts>form {
-
-	}
+width: 318px;
+height: 373px;
+}
 	
 	.feedback>.contacts>form input {
-
-	}
+padding: 0px 0 0 7px;
+margin-left: 3px;
+}
 	
 
 	  
 	.feedback>.contacts>form textarea {
-
-	}
+margin-left: 3px;
+padding: 8px 0 0 7px;
+height: 151px;
+}
 	
 	.feedback>.contacts>form button {
-
-	}
+height: 50px;
+margin-top: 2px;
+width: 315px;
+margin-left: 3px;
+}
 	
 	.feedback>.contacts>.info {
-
-	}
+margin-top: 32px;
+padding-left: 3px;
+width: 315px;
+}
 	
 	.feedback>.contacts>.info>span {
 
@@ -353,36 +454,44 @@
 	}
 	
 	.feedback>.contacts>.info li {
-		margin-bottom: 4px;
+		margin-bottom: 10px;
 	}
 	
 	.feedback>.contacts>.info li>a {
-
-	}
+margin-left: 23px;
+}
 	
 	.feedback>.contacts>.info li>.icon {
-
-	}
+position: absolute;
+}
 	
 	.feedback>.contacts>.info li>.icon_loc {
+background-position: 45% 100%;
+margin-top: 4px;
+height: 12px;
+}
 
-	}
+.icon.icon_loc {}
 	
 	.feedback>.contacts>.info li>.icon_tel {
-
-	}
+background-position: 45% 100%;
+margin-top: 2px;
+height: 15px;
+}
 	
 	.feedback>.contacts>.info li>.icon_mail {
-
-	}
+background-position: 45% 100%;
+margin-top: 0px;
+height: 15px;
+}
 	
 	footer {
-
-	}
+justify-content: center;
+}
 	
 	footer span{
-
-	}
+display: none;
+}
 	
 	footer .social{
 

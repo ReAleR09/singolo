@@ -1,10 +1,15 @@
 @media (max-width: 768px) {
 	.wrapper {
 		width: 768px;
+		margin: unset;
 	}
 
 	.header {
 		width: 768px;
+	}
+
+	.header .navbar {
+		margin: 38px 39px 0 0;
 	}
 		
 	.slider {
@@ -60,7 +65,8 @@
 	}
 	
 	.services {
-		height: 625px;
+		height: 631px;
+		border-bottom: unset;
 		padding: 44px 40px 0 40px;
 	}
 		
@@ -84,7 +90,8 @@
 	
 	
 	.portfolio {
-		height: 1032px;
+		height: 1030px;
+		border-bottom: #323746 8px solid;
 	}
 		
 	.portfolio .description {
@@ -135,8 +142,15 @@
 		
 	.aboutus {
 		padding: 55px 40px 0 42px;
-		height: 608px;
+		height: 614px;
+		border-bottom: unset;
 	}
+
+	.aboutus .title {
+
+margin-left: -2px;
+
+}
 	
 	.aboutus .people {
 		margin-top: 38px;
@@ -187,6 +201,15 @@
 		width: 578px;
 		height: 364px;
 	}
+
+	.feedback>.contacts>form input {
+		padding: 0 0 0 10px;
+	}
+
+	.feedback>.contacts>form textarea {
+		padding: 8px 0 0 10px;
+		height: 151px;
+	}	
 		
 	.feedback>.contacts>form button {
 		margin-top: 5px;

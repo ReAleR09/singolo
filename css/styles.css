@@ -38,13 +38,17 @@ body {
 	margin: 0 auto;
 }
 
-#side_menu {
-	display: none;
-}
-
 header {
 	height: 89px;
 	width: 100%;
+}
+
+#header #burger {
+	display: none;
+}
+
+#header #background {
+	display: none;
 }
 
 .header {
@@ -651,7 +655,7 @@ header {
 .feedback>.contacts>.info li>.icon_mail {
 	background-image: url("../assets/img/icons/mail.svg");
 	background-size: 14px;
-	background-position: 50% 134%;
+	background-position: 50% 150%;
 }
 
 footer {
@@ -701,6 +705,7 @@ footer .social{
 	display: flex;
 	height: 55px;
 	text-overflow: inherit;
+	overflow-y: initial;
 }
 
 #submitModal>#message {
