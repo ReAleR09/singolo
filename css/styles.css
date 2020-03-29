@@ -34,7 +34,7 @@ body {
 }
 
 .wrapper {
-	width: 1020px;
+	max-width: 1020px;
 	margin: 0 auto;
 }
 
@@ -744,7 +744,7 @@ footer .social{
 	transition: opacity 0.3s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1019px) {
 	.wrapper {
 		width: 768px;
 	}
@@ -981,7 +981,7 @@ footer .social{
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px){
 	.wrapper {
 		width: 375px;
 	}
