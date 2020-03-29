@@ -1,7 +1,6 @@
 @media (max-width: 768px) {
 	.wrapper {
 		width: 768px;
-		margin: unset;
 	}
 
 	.header {
@@ -231,7 +230,7 @@ margin-left: -2px;
 		
 	#submitModal{
 		width: 500px;
-		left: calc(384px - 281px);
+		left: calc(50% - 281px);
 	}
 		
 	#backdrop {

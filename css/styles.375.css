@@ -498,8 +498,9 @@ div#feedback {}
 	}
 	
 	#submitModal{
-
-	}
+width: 250px;
+left: calc(40% - 125px);
+}
 	
 	#submitModal.active {
 
