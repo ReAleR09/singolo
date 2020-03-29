@@ -87,13 +87,11 @@
 		top: 0;
 		margin: unset;
 		background-color: #2D303A;
-		box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
 	}
 
 	.header.opened .navbar {
-
-left: 0;
-
+left: 0;
+box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
 }
 	
 	.header .navbar ul {
